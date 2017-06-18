@@ -1,7 +1,9 @@
 <div class="countdown">
-    <div *ngFor="let time of display; let i = index" class="measurements {{time}}">
-        <b class="measurements-text">{{time}}</b>
-        <span *ngIf="display[i+1]" class="two-dots"> : </span>
-    </div>
+  <div *ngFor="let time of display; let i = index" class="measurements {{time}}">
+    <b class="measurements-text">
+      {{time}}
+      <span *ngIf="display[i+1]" class="divider"> {{divider}} </span>
+    </b>
+  </div>
 </div>
 <ng-content></ng-content>

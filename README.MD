@@ -45,7 +45,7 @@ import {CountDown} from "../components/ng2-date-countdown/countdown";
  In your html template:
 
  ```
- <count-down units="Days | Hours | Minutes | Seconds"  end="June 22, 2017"></count-down>
+ <countdown units="Days | Hours | Minutes | Seconds"  end="June 22, 2017"></countdown>
  ```
 
  To set a custom Language, set this variable in your component.ts file:
@@ -64,7 +64,7 @@ import {CountDown} from "../components/ng2-date-countdown/countdown";
 In your .html:
 
  ```
- <count-down [text]="text" units="Days | Hours | Minutes | Seconds"  end="June 22, 2017"></count-down>
+ <countdown [text]="text" units="Days | Hours | Minutes | Seconds"  end="June 22, 2017"></countdown>
  ```
 
 To customize the Countdown (.scss), use the class from it (you can inspect from chrome elements) and put the '/deep/' before them, example:
