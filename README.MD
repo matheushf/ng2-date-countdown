@@ -5,7 +5,7 @@
 <br>
 <br>
 <p align="center">
-Make customizables Date Countdowns with this simple and easy angular 2 component.
+## Make customizables Date Countdowns with this simple and easy angular 2 component. ##
 </p>
 
 <br>
@@ -21,7 +21,7 @@ Make customizables Date Countdowns with this simple and easy angular 2 component
 <img src="https://raw.githubusercontent.com/matheushf/ng2-date-countdown/master/img/custom2.png" alt="Europe">
 </p>
 
-##Instalation
+<h1>Instalation</h1>
 
 `npm install ng2-date-countdown --save`
 
@@ -48,7 +48,7 @@ import {CountDown} from "../components/ng2-date-countdown/countdown";
  <count-down units="Days | Hours | Minutes | Seconds"  end="June 22, 2017"></count-down>
  ```
 
- To set a custom Language, set this variable in your component.ts file:
+ To set a custom Language and divider, set this variable in your component.ts file:
 
  ```
  text: any = {
@@ -64,7 +64,7 @@ import {CountDown} from "../components/ng2-date-countdown/countdown";
 In your .html:
 
  ```
- <count-down [text]="text" units="Days | Hours | Minutes | Seconds"  end="June 22, 2017"></count-down>
+ <count-down [text]="text" [divider]="'|'" units="Days | Hours | Minutes | Seconds"  end="June 22, 2017"></count-down>
  ```
 
 To customize the Countdown (.scss), use the class from it (you can inspect from chrome elements) and put the '/deep/' before them, example:
@@ -83,6 +83,10 @@ To customize the Countdown (.scss), use the class from it (you can inspect from 
         color: white;
         margin-right: 5px;
         padding: 10px;
+     }
+     
+     .divider {
+      font-size: 30px;
      }
 ```
 
