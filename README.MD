@@ -26,7 +26,11 @@
 <img width="80%" src="https://raw.githubusercontent.com/matheushf/ng2-date-countdown/master/img/custom2.png" alt="Europe">
 </p>
 
+<br>
 
+**Star https://github.com/matheushf/ng2-date-countdown**
+
+<br>
 
 ## Instalation
 
