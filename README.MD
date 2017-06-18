@@ -4,9 +4,8 @@
 
 <br>
 <br>
-<p align="center">
-Make customizables Date Countdowns with this simple and easy angular 2 component.
-</p>
+
+## Make customizables Date Countdowns with this simple and easy angular 2 component.
 
 <br>
 <br>
@@ -28,7 +27,7 @@ Make customizables Date Countdowns with this simple and easy angular 2 component
 In your `app.module`, add `CountDown` to your declarations:
 
 ```
-import {CountDown} from "../components/ng2-date-countdown/countdown";
+import {CountDown} from "../components/ng2-date-countdown/";
 
 @NgModule({
    declarations: [
@@ -48,7 +47,7 @@ import {CountDown} from "../components/ng2-date-countdown/countdown";
  <countdown units="Days | Hours | Minutes | Seconds"  end="June 22, 2017"></countdown>
  ```
 
- To set a custom Language, set this variable in your component.ts file:
+ To set a custom Language and divider, set this variable in your component.ts file:
 
  ```
  text: any = {
@@ -83,6 +82,10 @@ To customize the Countdown (.scss), use the class from it (you can inspect from 
         color: white;
         margin-right: 5px;
         padding: 10px;
+     }
+
+     .divider {
+      font-size: 30px;
      }
 ```
 
