@@ -1,0 +1,106 @@
+.numeros {
+  margin: 30px;
+}
+
+.numeros div {
+  width: 80px;
+  font-size: 45px;
+  float: left;
+  margin-right: 10px;
+}
+
+.numeros .Dias {
+  width: 60px;
+}
+
+.numeros .Dias .dois-pontos {
+  display: none;
+}
+
+.numeros [class~="Seg."] {
+  width: 60px;
+}
+
+.numeros [class~="Seg."] .dois-pontos {
+  display: none;
+}
+
+.labels {
+  margin-top: -25px;
+  text-align: center;
+}
+
+.labels span {
+  font-size: 15px;
+  margin-right: 7px;
+}
+
+.labels .Dias {
+  margin-right: 0px;
+}
+
+.labels .Dias {
+  margin-right: 10px;
+}
+
+.labels .Horas {
+}
+
+.labels [class~="Min."] {
+}
+
+.labels [class~="Seg."] {
+}
+
+.Dias {
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .numeros {
+    margin: 2px;
+  }
+
+  .numeros div {
+    font-size: 35px;
+    width: 60px;
+    margin-right: 3px;
+  }
+
+  .numeros .Dias {
+    width: 50px;
+  }
+
+  .numeros [class~="Seg."] {
+    margin-left: -10px;
+  }
+
+  .labels {
+    margin-top: -15px;
+  }
+
+  .labels span {
+    font-size: 13px;
+    margin-right: 8px;
+  }
+
+  .labels .Dias {
+    margin-right: 5px;
+  }
+
+  .labels [class~="Seg."] {
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 320px) {
+  .numeros {
+    margin: 0;
+  }
+
+  .numeros div {
+    font-size: 25px;
+    width: 55px;
+    margin-right: 0;
+  }
+}

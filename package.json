@@ -1,0 +1,32 @@
+{
+  "name": "ng2-date-countdown",
+  "version": "1.0",
+  "description": "Angular2 Simple Date CountDown",
+  "main": "index.ts",
+  "typings": "./countdown.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ng serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matheushf/ng2-date-countdown.git"
+  },
+  "keywords": [
+    "angular2 countdown",
+    "ng2 simple countdown"
+  ],
+  "author": "Matheus Victor <hffmatheus@gmail.com> (http://www..com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matheushf/ng2-date-countdown.git/issues"
+  },
+  "homepage": "https://github.com/matheushf/ng2-date-countdown.git/issues#readme",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "request": "^2.64.0",
+    "yargs": "^3.29.0"
+  }
+}
+
+

@@ -1,0 +1,20 @@
+<div class="numeros">
+    <div *ngFor="let time of display; let i = index" class="{{tempo[i]}}" >
+        <b>{{time}}</b>
+
+        <span class="dois-pontos">
+                        :
+                     </span>
+
+        <div class="labels">
+                      <span class="{{tempo[i]}} label" >
+                          <b>{{tempo[i]}}</b>
+                      </span>
+        </div>
+
+    </div>
+
+</div>
+
+<!--<h1>{{displayString}}</h1>-->
+<ng-content></ng-content>
