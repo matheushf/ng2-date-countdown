@@ -20,6 +20,10 @@
 <img src="https://raw.githubusercontent.com/matheushf/ng2-date-countdown/master/img/custom2.png" alt="Europe">
 </p>
 
+<p align="center">
+<img src="https://raw.githubusercontent.com/matheushf/ng2-date-countdown/master/img/custom3.png" alt="Europe">
+</p>
+
 ## Instalation
 
 `npm install ng2-date-countdown --save`

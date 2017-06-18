@@ -89,8 +89,8 @@ export class CountDown {
       };
     }
 
-    if(!this.divider)
-      this.divider = ':';
+    // if(!this.divider)
+    //   this.divider = ':';
 
     this.displayString = returnString
       .replace("Weeks", this.text.Weeks + ' | ')
