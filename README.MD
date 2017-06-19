@@ -39,7 +39,7 @@
 In your `app.module`, add `CountDown` to your declarations:
 
 ```
-import {CountDown} from "../components/ng2-date-countdown/";
+import {CountDown} from "ng2-date-countdown";
 
 @NgModule({
    declarations: [
