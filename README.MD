@@ -53,6 +53,14 @@ import {CountDown} from "ng2-date-countdown";
  })
  ```
 
+## Usage
+
+ `[text]: Change the text displayed in the date `
+
+ `[units]: Choose wich units do you wanna display `
+
+ `[divider]: Choose what do you want to divade the dates ` 
+
  In your html template:
 
  ```

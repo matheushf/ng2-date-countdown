@@ -1,9 +1,10 @@
 import {Component, Input, Output, EventEmitter} from "@angular/core";
 
 @Component({
+  moduleId: module.id,
   selector: 'countdown',
   templateUrl: 'countdown.html',
-  styleUrls: ['./countdown.scss']
+  styleUrls: ['countdown.scss']
 })
 
 export class CountDown {
@@ -88,9 +89,6 @@ export class CountDown {
         MilliSeconds: "Milliseconds"
       };
     }
-
-    // if(!this.divider)
-    //   this.divider = ':';
 
     this.displayString = returnString
       .replace("Weeks", this.text.Weeks + ' | ')
