@@ -1,1 +1,1 @@
-git add . && git commit --message "minor adjustments" && git push
+git add . && git commit --message "month and year" && git push

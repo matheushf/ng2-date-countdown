@@ -28,7 +28,7 @@
 
 <br>
 
-**Star https://github.com/matheushf/ng2-date-countdown**
+**Fork https://github.com/matheushf/ng2-date-countdown**
 
 <br>
 
@@ -64,26 +64,28 @@ import {CountDown} from "ng2-date-countdown";
  In your html template:
 
  ```
- <countdown units="Days | Hours | Minutes | Seconds"  end="June 22, 2017"></countdown>
+ <countdown units="Year | Month | Days | Hours | Minutes | Seconds"  end="July 22, 2019"></countdown>
  ```
 
  To set a custom Language and divider, set this variable in your component.ts file:
 
  ```
- text: any = {
-         Weeks: "Semanas",
-         Days: "Dias",
-         Hours: "Horas",
-         Minutes: "Minutos",
-         Seconds: "Segundos",
-         MilliSeconds: "Milisegundos"
-     };
+ text:any = {
+     Year: 'Year',
+     Month: 'Month',
+     Weeks: "Weeks",
+     Days: "Days",
+     Hours: "Hours",
+     Minutes: "Minutes",
+     Seconds: "Seconds",
+     MilliSeconds: "MilliSeconds"
+   };
  ```
 
 In your .html:
 
  ```
- <countdown [text]="text" units="Days | Hours | Minutes | Seconds"  end="June 22, 2017"></countdown>
+ <countdown [text]="text" units="Year | Month | Days | Hours | Minutes | Seconds"  end="July 22, 2019"></countdown>
  ```
 
 To customize the Countdown (.scss), use the class from it (you can inspect from chrome elements) and put the '/deep/' before them, example:

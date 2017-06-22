@@ -40,6 +40,8 @@ export class CountDown {
 
     var lastUnit = this.units[this.units.length - 1],
       unitConstantForMillisecs = {
+        year: (((1000 * 60 * 60 * 24 * 7) * 4) * 12),
+        month:  ((1000 * 60 * 60 * 24 * 7) * 4),
         weeks: (1000 * 60 * 60 * 24 * 7),
         days: (1000 * 60 * 60 * 24),
         hours: (1000 * 60 * 60),
@@ -61,7 +63,7 @@ export class CountDown {
 
         }
         if (unitConstantForMillisecs.hasOwnProperty(unit.toLowerCase()) === false) {
-          throw new Error('Unit: ' + unit + ' is not supported. Please use following units: weeks, days, hours, minutes, seconds, milliseconds');
+          throw new Error('Unit: ' + unit + ' is not supported. Please use following units: year, month, weeks, days, hours, minutes, seconds, milliseconds');
         }
 
         unitsLeft[unit] = totalMillisecsLeft / unitConstantForMillisecs[unit.toLowerCase()];
@@ -81,6 +83,8 @@ export class CountDown {
 
     if (this.text === null || !this.text) {
       this.text = {
+        Year: "Year",
+        Month: "Month",
         Weeks: "Weeks",
         Days: "Days",
         Hours: "Hours",
@@ -91,6 +95,8 @@ export class CountDown {
     }
 
     this.displayString = returnString
+      .replace("Year", this.text.Year + ' | ')
+      .replace("Month", this.text.Month + ' | ')
       .replace("Weeks", this.text.Weeks + ' | ')
       .replace('Days', this.text.Days + ' | ')
       .replace('Hours', this.text.Hours + ' | ')
