@@ -110,8 +110,4 @@ To customize the Countdown (.scss), use the class from it (you can inspect from 
       font-size: 30px;
      }
 ```
-
-Any suggestions or doubts:
-<br>
-<br>
-hffmatheus@gmail.com
+**Inspired on the component: https://github.com/previousdeveloper/angular2-simple-countdown**
