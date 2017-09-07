@@ -111,7 +111,7 @@ To customize the Countdown (.scss), use the class from it (you can inspect from 
      }
 ```
 
-Any suggestions or doubts:
-<br>
-<br>
-hffmatheus@gmail.com
+**@todo**
+- Split text from numbers
+
+**Inspired on the component: https://github.com/previousdeveloper/angular2-simple-countdown**
