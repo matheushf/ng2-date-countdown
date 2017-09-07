@@ -2,14 +2,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  align-content: center;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+  
   .measurements {
-    flex: 0.1;
+    flex: 0.1;    
 
     .divider {
       float: right;
-      font-weight: bold;
     }
-  }
+  }  
 }

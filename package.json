@@ -1,6 +1,6 @@
 {
   "name": "ng2-date-countdown",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Angular2 Simple Date CountDown",
   "main": "index.ts",
   "typings": "./countdown.d.ts",

@@ -1,4 +1,4 @@
-import {Component, Input, Output, EventEmitter} from "@angular/core";
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   moduleId: module.id,
@@ -8,13 +8,14 @@ import {Component, Input, Output, EventEmitter} from "@angular/core";
 })
 
 export class CountDown {
-  @Input() units:any;
-  @Input() end:any;
-  @Input() displayString:string = '';
-  @Input() text:any;
-  @Input() divider:any;
-  @Output() reached:EventEmitter<Date> = new EventEmitter();
-  display:any = [];
+  @Input() units: any;
+  @Input() end: any;
+  @Input() displayString: string = '';
+  @Input() text: any;
+  @Input() divider: any;
+  @Output() reached: EventEmitter<Date> = new EventEmitter();
+  display: any = [];
+  displayNumbers: any = [];
 
   private wasReached = false;
 
@@ -28,20 +29,20 @@ export class CountDown {
       this.units = this.units.split('|');
     }
 
-    var givenDate:any = new Date(this.end);
-    var now:any = new Date();
+    let givenDate: any = new Date(this.end);
+    let now: any = new Date();
 
-    var dateDifference:any = givenDate - now;
+    let dateDifference: any = givenDate - now;
 
     if (dateDifference < 100 && dateDifference > 0 && !this.wasReached) {
       this.wasReached = true;
       this.reached.next(now);
     }
 
-    var lastUnit = this.units[this.units.length - 1],
+    let lastUnit = this.units[this.units.length - 1],
       unitConstantForMillisecs = {
         year: (((1000 * 60 * 60 * 24 * 7) * 4) * 12),
-        month:  ((1000 * 60 * 60 * 24 * 7) * 4),
+        month: ((1000 * 60 * 60 * 24 * 7) * 4),
         weeks: (1000 * 60 * 60 * 24 * 7),
         days: (1000 * 60 * 60 * 24),
         hours: (1000 * 60 * 60),
@@ -49,10 +50,11 @@ export class CountDown {
         seconds: 1000
       },
       unitsLeft = {},
-      returnString = '',
+      returnText = '',
+      returnNumbers = '',
       totalMillisecsLeft = dateDifference,
       i,
-      unit:any;
+      unit: any;
     for (i in this.units) {
       if (this.units.hasOwnProperty(i)) {
 
@@ -76,33 +78,34 @@ export class CountDown {
         totalMillisecsLeft -= unitsLeft[unit] * unitConstantForMillisecs[unit.toLowerCase()];
         unitConstantForMillisecs[unit.toLowerCase()] = false;
 
-
-        returnString += ' ' + unitsLeft[unit] + ' ' + unit;
+        returnNumbers += ' ' + unitsLeft[unit] + ' | ';
+        returnText += ' ' + unit;
       }
     }
 
     if (this.text === null || !this.text) {
       this.text = {
-        Year: "Year",
-        Month: "Month",
-        Weeks: "Weeks",
-        Days: "Days",
-        Hours: "Hours",
-        Minutes: "Minutes",
-        Seconds: "Seconds",
-        MilliSeconds: "Milliseconds"
+        Year: 'Year',
+        Month: 'Month',
+        Weeks: 'Weeks',
+        Days: 'Days',
+        Hours: 'Hours',
+        Minutes: 'Minutes',
+        Seconds: 'Seconds',
+        MilliSeconds: 'Milliseconds'
       };
     }
 
-    this.displayString = returnString
-      .replace("Year", this.text.Year + ' | ')
-      .replace("Month", this.text.Month + ' | ')
-      .replace("Weeks", this.text.Weeks + ' | ')
+    this.displayString = returnText
+      .replace('Year', this.text.Year + ' | ')
+      .replace('Month', this.text.Month + ' | ')
+      .replace('Weeks', this.text.Weeks + ' | ')
       .replace('Days', this.text.Days + ' | ')
       .replace('Hours', this.text.Hours + ' | ')
       .replace('Minutes', this.text.Minutes + ' | ')
       .replace('Seconds', this.text.Seconds);
 
+    this.displayNumbers = returnNumbers.split('|');
     this.display = this.displayString.split('|');
   }
 }
