@@ -1,7 +1,7 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  moduleId: module.id,
+  // moduleId: module.id,
   selector: 'countdown',
   templateUrl: 'countdown.html',
   styleUrls: ['countdown.scss']

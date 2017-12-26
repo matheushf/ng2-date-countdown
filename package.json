@@ -2,11 +2,14 @@
   "name": "ng2-date-countdown",
   "version": "0.0.4",
   "description": "Angular2 Simple Date CountDown",
-  "main": "index.ts",
-  "typings": "./countdown.d.ts",
+  "main": "index.js",
+  "typings": "./dist/countdown.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ng serve"
+    "start": "ng serve",
+    "inline": "gulp inline-build-templates",
+    "tsc-build": "tsc -p ./tsconfig-build.json",
+    "build": "npm run inline && npm run tsc-build"
   },
   "repository": {
     "type": "git",
@@ -23,10 +26,22 @@
   },
   "homepage": "https://github.com/matheushf/ng2-date-countdown.git/issues#readme",
   "dependencies": {
+    "@angular/common": "5.1.2",
+    "@angular/compiler": "5.1.2",
+    "@angular/core": "5.1.2",
     "colors": "^1.1.2",
-    "request": "^2.64.0",
-    "yargs": "^3.29.0"
+    "core-js": "^2.5.3",
+    "reflect-metadata": "^0.1.10",
+    "request": "^2.83.0",
+    "rxjs": "5.5.6",
+    "tslib": "^1.8.1",
+    "yargs": "^10.0.3",
+    "zone.js": "^0.8.18"
+  },
+  "devDependencies": {
+    "@types/core-js": "^0.9.43",
+    "gulp": "^3.9.1",
+    "gulp-inline-ng2-template": "^4.1.0",
+    "node-sass": "^4.7.2"
   }
 }
-
-

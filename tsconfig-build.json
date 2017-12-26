@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+        "target": "es2015",
+        "module": "commonjs",
+        "declaration": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "sourceMap": true,
+        "importHelpers": true,
+        "noEmitHelpers": true,
+        "outDir": "dist"
+    },
+    "files": [
+        "tmp/src-inlined/countdown.ts"
+    ],
+    "include": [
+        "lib/countdown.html",
+        "lib/countdown.scss"
+    ],
+    "exclude": [
+        "node_modules",
+        "bundles"
+    ],
+    "compileOnSave": false,
+    "buildOnSave": false,
+    "awesomeTypescriptLoaderOptions": {
+        "forkChecker": true,
+        "useWebpackText": true
+    }
+}
