@@ -5,7 +5,7 @@
 <br>
 <br>
 
-## Make customizables Date Countdowns with this simple and easy angular 2 component.
+## Make customizables Date Countdowns with this simple and easy angular 5 component.
 
 <br>
 <br>
