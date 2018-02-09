@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "target": "es5",
+      "noImplicitAny": false,
+      "sourceMap": false,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "declaration": false,
+      "lib": [
+        "es2015",
+        "dom"
+      ],
+      "outDir": "lib",
+      "typeRoots": [
+        "node_modules/@types"
+      ]
+    },
+    "files": [
+      "index.ts"
+    ],
+    "angularCompilerOptions": {
+      "skipMetadataEmit": false
+    },
+    "awesomeTypescriptLoaderOptions": {
+      "silent": true
+    }
+  }
+  

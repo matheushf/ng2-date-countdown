@@ -1,0 +1,1 @@
+export {CountDownComponent} from './countdown.component';

@@ -2,14 +2,28 @@
   "name": "ng2-date-countdown",
   "version": "0.0.5",
   "description": "Angular2 Simple Date CountDown",
-  "main": "index.js",
-  "typings": "./dist/countdown.d.ts",
+  "main": "./dist/countdown.component.js",
+  "module": "./dist/ng2-date-countdown.js",
+  "typings": "./dist/ng2-date-countdown.d.ts",
+  "$schema": "./node_modules/ng-packagr/package.schema.json",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "ng serve",
     "inline": "gulp inline-build-templates",
     "tsc-build": "tsc -p ./tsconfig-build.json",
-    "build": "npm run inline && npm run tsc-build"
+    "buildOLD": "npm run inline && npm run tsc-build",
+    "buildNEW": "npm run inline && npm run ngcompile",
+    "buildW": "webpack --env.dev --progress --hide-modules",
+    "build": "npm run build:esm && npm run build:umd",
+    "build:esm": "gulp inline-build-templates && npm run ngcompile",
+    "build:umd": "webpack --config webpack-umd.config.js",
+    "ngcompile": "node_modules/.bin/ngc -p ./tsconfig-aot.json",
+    "build:lib": "ng-packagr -p package.json"
+  },
+  "ngPackage": {
+    "lib": {
+      "entryFile": "public_api.ts"
+    }
   },
   "repository": {
     "type": "git",
@@ -25,23 +39,38 @@
     "url": "https://github.com/matheushf/ng2-date-countdown.git/issues"
   },
   "homepage": "https://github.com/matheushf/ng2-date-countdown.git/issues#readme",
-  "dependencies": {
-    "@angular/common": "5.1.2",
-    "@angular/compiler": "5.1.2",
-    "@angular/core": "5.1.2",
-    "colors": "^1.1.2",
-    "core-js": "^2.5.3",
-    "reflect-metadata": "^0.1.10",
-    "request": "^2.83.0",
-    "rxjs": "5.5.6",
-    "tslib": "^1.8.1",
-    "yargs": "^10.0.3",
-    "zone.js": "^0.8.18"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "@angular/common": "5.1.2",
+    "@angular/compiler": "^5.1.2",
+    "@angular/compiler-cli": "^5.2.4",
+    "@angular/core": "5.1.2",
+    "@angular/platform-server": "^5.2.4",
+    "@ngtools/webpack": "^1.9.4",
     "@types/core-js": "^0.9.43",
+    "@types/webpack": "^3.0.13",
+    "@types/webpack-env": "^1.13.0",
+    "angular2-template-loader": "^0.6.2",
+    "compression-webpack-plugin": "^1.1.6",
+    "copy-webpack-plugin": "^4.4.1",
+    "css-loader": "^0.28.9",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.6",
     "gulp": "^3.9.1",
     "gulp-inline-ng2-template": "^4.1.0",
-    "node-sass": "^4.7.2"
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^2.30.1",
+    "json-loader": "^0.5.7",
+    "ng-packagr": "^1.7.0",
+    "node-sass": "^4.7.2",
+    "raw-loader": "^0.5.1",
+    "rxjs": "^5.5.6",
+    "sass-loader": "^6.0.6",
+    "to-string-loader": "^1.1.5",
+    "typescript": "^2.7.1",
+    "webpack-angular-externals": "^1.0.2",
+    "webpack-merge": "^4.1.1",
+    "webpack-rxjs-externals": "^1.1.0",
+    "zone.js": "^0.8.20"
   }
 }

@@ -1,17 +1,25 @@
 {
     "compilerOptions": {
-        "target": "es2015",
+        "target": "es5",
         "module": "commonjs",
-        "declaration": true,
+        "declaration": false,
+        "noImplicitAny": false,
+        "lib": [
+            "es2015",
+            "dom"
+        ],
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
         "sourceMap": true,
         "importHelpers": true,
         "noEmitHelpers": true,
-        "outDir": "dist"
+        "outDir": "dist",
+        "typeRoots": [
+            "node_modules/@types"
+        ]
     },
     "files": [
-        "tmp/src-inlined/countdown.ts"
+        "tmp/src-inlined/countdown.component.ts"
     ],
     "include": [
         "lib/countdown.html",
@@ -23,6 +31,9 @@
     ],
     "compileOnSave": false,
     "buildOnSave": false,
+    "angularCompilerOptions": {
+        "skipMetadataEmit": false
+    },
     "awesomeTypescriptLoaderOptions": {
         "forkChecker": true,
         "useWebpackText": true

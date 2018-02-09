@@ -1,0 +1,1 @@
+export {CountDownModule, CountDownComponent} from './src/index';

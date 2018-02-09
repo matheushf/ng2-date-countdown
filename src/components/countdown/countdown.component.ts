@@ -1,26 +1,28 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  // moduleId: module.id,
+  moduleId: module.id,
   selector: 'countdown',
-  templateUrl: 'countdown.html',
-  styleUrls: ['countdown.scss']
+  templateUrl: './countdown.html',
+  styleUrls: ['./countdown.scss']
 })
 
-export class CountDown {
+export class CountDownComponent {
   @Input() units: any;
   @Input() end: any;
   @Input() displayString: string = '';
   @Input() text: any;
   @Input() divider: any;
-  @Output() reached: EventEmitter<Date> = new EventEmitter();
+  @Output() reached: any = new EventEmitter();
   display: any = [];
   displayNumbers: any = [];
-
-  private wasReached = false;
+  wasReached = false;
 
   constructor() {
-    setInterval(() => this._displayString(), 100);
+    let self = this;
+    setInterval(function () {
+      self._displayString()
+    }, 100);
   }
 
   _displayString() {
