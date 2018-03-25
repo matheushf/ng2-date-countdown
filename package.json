@@ -40,7 +40,7 @@
   },
   "homepage": "https://github.com/matheushf/ng2-date-countdown.git/issues#readme",
   "dependencies": {},
-  "devDependencies": {
+  "peerDependencies": {
     "@angular/common": "5.1.2",
     "@angular/compiler": "^5.1.2",
     "@angular/compiler-cli": "^5.2.4",
