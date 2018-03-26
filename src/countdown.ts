@@ -1,7 +1,7 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  // moduleId: module.id,
+  moduleId: module.id,
   selector: 'countdown',
   templateUrl: 'countdown.html',
   styleUrls: ['countdown.scss']
@@ -10,14 +10,14 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class CountDown {
   @Input() units: any;
   @Input() end: any;
-  @Input() displayString: string = '';
+  @Input() displayString: String = '';
   @Input() text: any;
   @Input() divider: any;
+  @Input() showZero: Boolean = false;
   @Output() reached: EventEmitter<Date> = new EventEmitter();
   display: any = [];
   displayNumbers: any = [];
-
-  private wasReached = false;
+  wasReached: Boolean = false;
 
   constructor() {
     setInterval(() => this._displayString(), 100);
@@ -31,7 +31,6 @@ export class CountDown {
 
     let givenDate: any = new Date(this.end);
     let now: any = new Date();
-
     let dateDifference: any = givenDate - now;
 
     if (dateDifference < 100 && dateDifference > 0 && !this.wasReached) {
@@ -55,6 +54,7 @@ export class CountDown {
       totalMillisecsLeft = dateDifference,
       i,
       unit: any;
+
     for (i in this.units) {
       if (this.units.hasOwnProperty(i)) {
 
@@ -75,6 +75,7 @@ export class CountDown {
         } else {
           unitsLeft[unit] = Math.floor(unitsLeft[unit]);
         }
+
         totalMillisecsLeft -= unitsLeft[unit] * unitConstantForMillisecs[unit.toLowerCase()];
         unitConstantForMillisecs[unit.toLowerCase()] = false;
 
