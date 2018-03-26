@@ -61,6 +61,8 @@ import {CountDown} from "ng2-date-countdown";
 
  `[divider]: Choose what do you want to divade the dates ` 
 
+ `[showZeros]: Choose if you want to show a zero before the number '01 Days'`
+
  In your html template:
 
  ```

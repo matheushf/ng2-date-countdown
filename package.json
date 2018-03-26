@@ -1,6 +1,6 @@
 {
   "name": "ng2-date-countdown",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Angular2 Simple Date CountDown",
   "main": "index.js",
   "typings": "./dist/countdown.d.ts",
@@ -11,6 +11,9 @@
     "tsc-build": "tsc -p ./tsconfig-build.json",
     "build": "npm run inline && npm run tsc-build"
   },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/matheushf/ng2-date-countdown.git"
