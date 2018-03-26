@@ -114,6 +114,6 @@ To customize the Countdown (.scss), use the class from it (you can inspect from 
 ```
 
 **@todo**
-- Split text from numbers
+- Get AOT running
 
 **Inspired on the component: https://github.com/previousdeveloper/angular2-simple-countdown**
