@@ -1,6 +1,6 @@
 {
   "name": "ng2-date-countdown",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Angular2 Simple Date CountDown",
   "main": "index.js",
   "typings": "./dist/countdown.d.ts",
@@ -35,7 +35,9 @@
     "reflect-metadata": "^0.1.10",
     "@types/core-js": "^0.9.43",
     "core-js": "^2.5.3",
-    "zone.js": "^0.8.18"
+    "zone.js": "^0.8.18",
+    "reflect-metadata": "^0.1.12",
+    "rxjs": "^5.5.6"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
