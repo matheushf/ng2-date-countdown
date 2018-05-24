@@ -1,7 +1,7 @@
 <div class="countdown">
   <div *ngFor="let time of display; let i = index" class="measurements {{time}}">
     <p class="measurements-number">
-      {{ (showZero && displayNumbers[i] < 10) ? '0' + displayNumbers[i] : displayNumbers[i]}}
+      {{ (showZero && displayNumbers[i] < 10) ? '0' + displayNumbers[i].trim() : displayNumbers[i]}}
     </p>
     <span *ngIf="display[i+1]" class="divider"> {{divider}} </span>
     <p class="measurements-text">
