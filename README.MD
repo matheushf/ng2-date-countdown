@@ -55,7 +55,7 @@ import {CountDown} from "ng2-date-countdown";
 
 ## Usage
 
- `(reached)="someFunction($event)" You can use a Callback function for when it reaches 0"
+ `(reached)="someFunction($event)" You can use a Callback function for when it reaches 0" `
 
  `[text]: Change the text displayed in the date `
 
