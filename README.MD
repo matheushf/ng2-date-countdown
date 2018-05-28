@@ -55,6 +55,8 @@ import {CountDown} from "ng2-date-countdown";
 
 ## Usage
 
+ `(reached)="someFunction($event)" You can use a Callback function for when it reaches 0"
+
  `[text]: Change the text displayed in the date `
 
  `[units]: Choose wich units do you wanna display `
@@ -87,7 +89,7 @@ import {CountDown} from "ng2-date-countdown";
 In your .html:
 
  ```
- <countdown [text]="text" units="Year | Month | Days | Hours | Minutes | Seconds"  end="July 22, 2019"></countdown>
+ <countdown (reached)="callback($event)" [text]="text" units="Year | Month | Days | Hours | Minutes | Seconds"  end="July 22, 2019"></countdown>
  ```
 
 To customize the Countdown (.scss), use the class from it (you can inspect from chrome elements) and put the '/deep/' before them, example:
