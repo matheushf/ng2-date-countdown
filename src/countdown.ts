@@ -116,15 +116,4 @@ export class CountDown {
     this.displayNumbers = returnNumbers.split('|');
     this.display = this.displayString.split('|');
   }
-
-  checkNegative() {
-    // console.log('check ', this.displayNumbers.length);
-    /* for (let i = this.displayNumbers.length - 1; i >= 0; i--) {
-      console.log('check ', this.displayNumbers[i]);
-    } */
-
-    /* if (this.displayNumbers[this.displayNumbers.length - 1] == 0) {
-      console.log('oi');
-    } */
-  }
 }
