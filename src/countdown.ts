@@ -25,6 +25,9 @@ export class CountDown {
 
   _displayString() {
 
+    if (this.wasReached)
+      return;
+
     if (typeof this.units === 'string') {
       this.units = this.units.split('|');
     }
@@ -33,7 +36,7 @@ export class CountDown {
     let now: any = new Date();
     let dateDifference: any = givenDate - now;
 
-    if (dateDifference < 100 && dateDifference > 0 && !this.wasReached) {
+    if ((dateDifference < 100 && dateDifference > 0) || dateDifference < 0 && !this.wasReached) {
       this.wasReached = true;
       this.reached.next(now);
     }
@@ -68,7 +71,8 @@ export class CountDown {
           throw new Error('Unit: ' + unit + ' is not supported. Please use following units: year, month, weeks, days, hours, minutes, seconds, milliseconds');
         }
 
-        unitsLeft[unit] = totalMillisecsLeft / unitConstantForMillisecs[unit.toLowerCase()];
+        // If it was reached, everything is zero
+        unitsLeft[unit] = (this.wasReached) ? 0 : totalMillisecsLeft / unitConstantForMillisecs[unit.toLowerCase()];
 
         if (lastUnit === unit) {
           unitsLeft[unit] = Math.ceil(unitsLeft[unit]);
@@ -78,6 +82,9 @@ export class CountDown {
 
         totalMillisecsLeft -= unitsLeft[unit] * unitConstantForMillisecs[unit.toLowerCase()];
         unitConstantForMillisecs[unit.toLowerCase()] = false;
+
+        // If it's less than 0, round to 0
+        unitsLeft[unit] = (unitsLeft[unit] > 0) ? unitsLeft[unit] : 0;
 
         returnNumbers += ' ' + unitsLeft[unit] + ' | ';
         returnText += ' ' + unit;
@@ -108,5 +115,16 @@ export class CountDown {
 
     this.displayNumbers = returnNumbers.split('|');
     this.display = this.displayString.split('|');
+  }
+
+  checkNegative() {
+    // console.log('check ', this.displayNumbers.length);
+    /* for (let i = this.displayNumbers.length - 1; i >= 0; i--) {
+      console.log('check ', this.displayNumbers[i]);
+    } */
+
+    /* if (this.displayNumbers[this.displayNumbers.length - 1] == 0) {
+      console.log('oi');
+    } */
   }
 }
