@@ -100,10 +100,6 @@ To customize the Countdown (.scss), use the class from it (you can inspect from 
       height: 100px;
       background: black;
 
-      .two-dots {
-        display: none;
-      }
-
       .measurements {
         color: white;
         margin-right: 5px;
