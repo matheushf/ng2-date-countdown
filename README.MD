@@ -36,18 +36,18 @@
 
 `npm install ng2-date-countdown --save`
 
-In your `app.module`, add `CountDown` to your declarations:
+In your `app.module`, add `CountdownModule` to your imports:
 
 ```
-import {CountDown} from "ng2-date-countdown";
+import { CountdownModule } from "ng2-date-countdown";
 
 @NgModule({
    declarations: [
-     AppComponent,
-     CountDown
+     AppComponent
    ],
    imports: [
-     BrowserModule
+     BrowserModule,
+     CountdownModule
    ],
    bootstrap: [AppComponent]
  })
