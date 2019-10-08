@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+      "target": "es2015",
+      "module": "esnext",
+      "moduleResolution": "node",
+      "declaration": false,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "sourceMap": true
+  },
+  "compileOnSave": false,
+  "buildOnSave": false
+}
