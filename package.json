@@ -1,12 +1,12 @@
 {
   "name": "ng2-date-countdown",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Angular2 Simple Date CountDown",
-  "main": "public_api.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "ng serve",
-    "build": "ng-packagr -p package.json"
+    "build": "ng-packagr -p package.json && npm run copy",
+    "copy": "cp ./README.md ./dist"
   },
   "repository": {
     "type": "git",

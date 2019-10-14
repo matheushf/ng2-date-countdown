@@ -5,8 +5,9 @@
 <br>
 <br>
 
-## Make customizables Date Countdowns with this simple and easy angular 5 component.
+## Make customizables Date Countdowns with this simple and easy angular 8 component.
 
+(`--prod` compatible)
 <br>
 <br>
 
@@ -110,8 +111,5 @@ To customize the Countdown (.scss), use the class from it (you can inspect from 
       font-size: 30px;
      }
 ```
-
-**@todo**
-- Get AOT running
 
 **Inspired on the component: https://github.com/previousdeveloper/angular2-simple-countdown**
