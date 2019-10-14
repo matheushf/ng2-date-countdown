@@ -112,4 +112,4 @@ To customize the Countdown (.scss), use the class from it (you can inspect from 
      }
 ```
 
-**Inspired on the component: https://github.com/previousdeveloper/angular2-simple-countdown**
+(inspired on [angular-simple-countdown](https://github.com/previousdeveloper/angular2-simple-countdown))
