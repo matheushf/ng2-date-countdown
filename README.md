@@ -5,8 +5,9 @@
 <br>
 <br>
 
-## Make customizables Date Countdowns with this simple and easy angular 5 component.
+## Make customizables Date Countdowns with this simple and easy angular 8 component.
 
+(`--prod` compatible)
 <br>
 <br>
 
@@ -36,18 +37,18 @@
 
 `npm install ng2-date-countdown --save`
 
-In your `app.module`, add `CountDown` to your declarations:
+In your `app.module`, add `CountdownModule` to your imports:
 
 ```
-import {CountDown} from "ng2-date-countdown";
+import { CountdownModule } from "ng2-date-countdown";
 
 @NgModule({
    declarations: [
-     AppComponent,
-     CountDown
+     AppComponent
    ],
    imports: [
-     BrowserModule
+     BrowserModule,
+     CountdownModule
    ],
    bootstrap: [AppComponent]
  })
@@ -110,8 +111,5 @@ To customize the Countdown (.scss), use the class from it (you can inspect from 
       font-size: 30px;
      }
 ```
-
-**@todo**
-- Get AOT running
 
 **Inspired on the component: https://github.com/previousdeveloper/angular2-simple-countdown**
