@@ -60,9 +60,9 @@ import { CountdownModule } from "ng2-date-countdown";
 
  `[text]: Change the text displayed in the date `
 
- `[units]: Choose wich units do you wanna display `
+ `[units]: Choose which units do you want to display `
 
- `[divider]: Choose what do you want to divade the dates ` 
+ `[divider]: Choose what you want to divide the dates with ` 
 
  `[showZeros]: Choose if you want to show a zero before the number '01 Days'`
 
