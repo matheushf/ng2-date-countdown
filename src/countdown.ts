@@ -92,8 +92,8 @@ export class CountDown {
 
     if (this.text === null || !this.text) {
       this.text = {
-        Year: 'Year',
-        Month: 'Month',
+        Years: 'Years',
+        Months: 'Months',
         Weeks: 'Weeks',
         Days: 'Days',
         Hours: 'Hours',
@@ -104,8 +104,8 @@ export class CountDown {
     }
 
     this.displayString = returnText
-      .replace('Year', this.text.Year + ' | ')
-      .replace('Month', this.text.Month + ' | ')
+      .replace('Years', this.text.Years + ' | ')
+      .replace('Months', this.text.Months + ' | ')
       .replace('Weeks', this.text.Weeks + ' | ')
       .replace('Days', this.text.Days + ' | ')
       .replace('Hours', this.text.Hours + ' | ')
