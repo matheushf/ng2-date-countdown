@@ -24,14 +24,14 @@
   "homepage": "https://github.com/matheushf/ng2-date-countdown.git/issues#readme",
   "peerDependencies": {
     "@angular/common": "10.0.7",
-    "@angular/core": "10.0.7"
+    "@angular/core": "11.0.5"
   },
   "devDependencies": {
     "@angular/cli": "10.0.5",
     "@angular/common": "10.0.7",
     "@angular/compiler": "10.0.7",
     "@angular/compiler-cli": "10.0.7",
-    "@angular/core": "10.0.7",
+    "@angular/core": "11.0.5",
     "colors": "^1.4.0",
     "ng-packagr": "^10.0.3",
     "node-sass": "^4.14.1",
